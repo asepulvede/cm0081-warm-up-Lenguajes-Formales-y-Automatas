@@ -26,10 +26,7 @@ propMyAppend x y = x ++ y == myAppend x y
 
 -- | Testing 'myNull, function 
 propMyNull :: [Int] -> Bool 
-propMyNull x 
-   | myNull x = length x == 0
-   | otherwise = length x > 0 
-
+propMyNull x = null x == myNull x
 
 main :: IO ()
 main = do
